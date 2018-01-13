@@ -1,4 +1,5 @@
-
+var cacheName = "Zero-v1";
+var dataCacheName = "Zero-v1-data"
 
 
 self.addEventListener('install', function(e) {
