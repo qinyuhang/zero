@@ -1,5 +1,11 @@
 var cacheName = "Zero-v1";
 var dataCacheName = "Zero-v1-data"
+var filesToCache = [
+  '.',
+  'index.html',
+  'icon-144x144.png',
+  'main.css'
+];
 
 
 self.addEventListener('install', function(e) {
@@ -35,4 +41,13 @@ self.addEventListener('activate', function(e) {
    * you activate the service worker faster.
    */
   return self.clients.claim();
+});
+
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
 });
