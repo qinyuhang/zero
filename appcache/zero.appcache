@@ -1,7 +1,7 @@
 CACHE MANIFEST
 #2018-1-15 08:09:57
 #html
-https://welkin.online/playground/zero
+https://welkin.online/playground/zero/index.html
 #img
 #css
 #js
@@ -10,4 +10,4 @@ NETWORK:
 *
 
 FALLBACK
-https://welkin.online/playground/zero /html/manifest/html/zero.html
+https://welkin.online/playground/zero /index.html
